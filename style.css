@@ -8,9 +8,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .container {
+}
+
+.container {
     background-color: #ffffff22;
     padding: 30px 40px;
     border-radius: 15px;
@@ -19,25 +19,25 @@ body {
     backdrop-filter: blur(10px);
     width: 90%;
     max-width: 400px;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-bottom: 25px;
     font-size: 28px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 20px;
     text-align: left;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-  }
-  
-  select {
+}
+
+select {
     width: 100%;
     padding: 10px;
     border: none;
@@ -45,9 +45,9 @@ body {
     font-size: 16px;
     background-color: #fff;
     color: #333;
-  }
-  
-  button {
+}
+
+button {
     width: 100%;
     padding: 12px;
     background-color: #ff6b81;
@@ -58,18 +58,42 @@ body {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #ff4757;
-  }
-  
-  #result {
+}
+
+#result {
     margin-top: 25px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
     background-color: #ffffff33;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
-  }
-  
+    text-align: center;
+}
+
+#result ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#result ul ul {
+    margin: 5px 0 15px 20px;
+}
+
+#result li {
+    margin-bottom: 10px;
+}
+
+#result strong {
+    color: #fff;
+    font-weight: bold;
+}
+
+#result p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
