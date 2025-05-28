@@ -1,76 +1,115 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #667eea, #764ba2);
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
     margin: 0;
     padding: 0;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    transition: background 0.5s ease;
 }
 
 .container {
-    background-color: #ffffff22;
-    padding: 30px 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     width: 90%;
-    max-width: 400px;
+    max-width: 450px;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    margin-bottom: 25px;
-    font-size: 28px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: left;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 select {
     width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
     font-size: 16px;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+select:hover, select:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 button {
     width: 100%;
-    padding: 12px;
-    background-color: #ff6b81;
+    padding: 15px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E8E);
     color: white;
     border: none;
-    font-size: 16px;
-    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 button:hover {
-    background-color: #ff4757;
+    background: linear-gradient(45deg, #FF8E8E, #FF6B6B);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
 }
 
 #result {
-    margin-top: 25px;
-    font-size: 16px;
-    background-color: #ffffff33;
-    padding: 20px;
-    border-radius: 10px;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+#result p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
     text-align: center;
+    font-weight: 600;
 }
 
 #result ul {
@@ -80,20 +119,57 @@ button:hover {
 }
 
 #result ul ul {
-    margin: 5px 0 15px 20px;
+    margin: 8px 0 15px 20px;
+    padding-left: 15px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 #result li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 #result strong {
-    color: #fff;
-    font-weight: bold;
+    color: #FFE66D;
+    font-weight: 600;
+    margin-right: 5px;
 }
 
-#result p {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: bold;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    select, button {
+        font-size: 15px;
+    }
+
+    #result p {
+        font-size: 18px;
+    }
+
+    #result li {
+        font-size: 14px;
+    }
 }
